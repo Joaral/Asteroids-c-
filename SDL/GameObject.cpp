@@ -21,7 +21,7 @@ GameObject::GameObject(SDL_Renderer* renderer) {
 }
 
 void GameObject::Update(float dt) {
-	zRotation = 10 * dt;
+	zRotation += 1.f * dt;
 }
 
 void GameObject::Render(SDL_Renderer* renderer) {
@@ -31,5 +31,5 @@ void GameObject::Render(SDL_Renderer* renderer) {
 	SDL_Rect destination{ position.x,position.y,		//WINDOW POSITION
 				source.w*scale.x,source.h *scale.y };	//WINDOW SIZE
 
-	SDL_RenderCopy(renderer, texture, &source, &destination);
+	SDL_RenderCopyEx(renderer,texture, &source, &destination,zRotation,NULL,SDL_FLIP_NONE);
 }
