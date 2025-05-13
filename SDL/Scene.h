@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include "GameObject.h"
-#include "UItext.h"
+#include "UIText.h"
 
 class Scene {
 protected:
