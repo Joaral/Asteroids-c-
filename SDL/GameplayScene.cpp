@@ -19,7 +19,10 @@ void GamePlayScene::Render(SDL_Renderer* rend) {
 
 	Scene::Render(rend);
 
+
 	if (!textObjects.empty()) {
+		textObjects[0]->SetText("Ja ho tenim Tot!", rend);
+
 		textObjects[0]->Render(rend);
 	}
 
@@ -27,6 +30,9 @@ void GamePlayScene::Render(SDL_Renderer* rend) {
 
 void GamePlayScene::Exit() {
 
-
+	for (int i = 0; i < textObjects.size(); i++) {
+		delete(textObjects[i]);
+	}
+	textObjects.clear();
 
 }
