@@ -54,6 +54,9 @@
     <ClInclude Include="SpaceShip.h">
       <Filter>Header Files\OBJECTS</Filter>
     </ClInclude>
+    <ClInclude Include="UIText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEngine.cpp">
@@ -80,6 +83,9 @@
     <ClCompile Include="SpaceShip.cpp">
       <Filter>Source Files\OBJECTS</Filter>
     </ClCompile>
+    <ClCompile Include="UIText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\logo.png">
@@ -88,5 +94,10 @@
     <Image Include="resources\asteroids_spritesheet.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\PixelPowerline-9xOK.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
   </ItemGroup>
 </Project>
