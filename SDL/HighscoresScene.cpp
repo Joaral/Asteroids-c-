@@ -1,13 +1,26 @@
-#include "HighscoresScene.h"
+#include "HighScoresScene.h"
 
-void HighscoresScene::Start(SDL_Renderer* rend) {
+
+void HighScoresScene::Start(SDL_Renderer* rend) {
+
+
+
 }
 
-void HighscoresScene::Update(float dt) {
+void HighScoresScene::Update(float dt) {
+
+
+
 }
 
-void HighscoresScene::Render(SDL_Renderer* rend) {
+void HighScoresScene::Render(SDL_Renderer* rend) {
+
+
+
 }
 
-void HighscoresScene::Exit() {
+void HighScoresScene::Exit() {
+
+
+
 }
