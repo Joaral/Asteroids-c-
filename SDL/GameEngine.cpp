@@ -22,6 +22,9 @@ void GameEngine::Updater() {
 	gameScene["HighScores"] = new HighScoresScene();
 	gameScene["GamePlay"] = new GamePlayScene();
 
+	Vector2Int projectileTexCoor = { 0, 0 };  // Ajusta según la posición del sprite del proyectil en el spritesheet
+	Vector2Int projectileSizeClamp = { 8, 8 }; // Ajusta según el tamaño del sprite del proyectil
+
 	Scene* currentScene = gameScene["GamePlay"];
 
 	currentScene->Start(renderer);
@@ -48,41 +51,6 @@ void GameEngine::Updater() {
 			currentScene->Start(renderer);
 		}
 	}
-
-
-
-		  /*
-	while (!IM.GetQuit()) {
-	
-		IM.Listen();
-
-		float currentTime = (float)SDL_GetPerformanceCounter() / (float)SDL_GetPerformanceFrequency();
-		dt += currentTime - lastTime;
-
-		if (dt > frameTime) {			
-
-			currentScene->Update(dt);
-
-			SDL_SetRenderDrawColor(renderer, 76, 0, 153, 1);
-			SDL_RenderClear(renderer);
-
-			currentScene->Render(renderer);
-
-			SDL_RenderPresent(renderer);
-
-			if (currentScene->IsFinished()) {
-
-				currentScene->Exit();
-				currentScene = gameScene[currentScene->GetTargetScene()];
-				currentScene->Start(renderer);
-
-			}
-
-			dt -= frameTime;
-
-		}
-	}
-		   */
 
 }
 

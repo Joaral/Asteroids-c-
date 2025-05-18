@@ -1,14 +1,18 @@
 #include "GamePlayScene.h"
 #include "SpaceShip.h"
-//esto en el menu
+
+
+Vector2Int projectileTexCoor = { 0, 0 };  // Ajusta a la posición correcta en el spritesheet
+Vector2Int projectileSizeClamp = { 8, 8 }; // Ajusta al tamaño correcto del sprite
 
 void GamePlayScene::Start(SDL_Renderer* rend) {
 
 	printf("CREANDO NAVE\n");
 
 	Scene::Start(rend);
-
-	objects.push_back(new SpaceShip(rend, &IM));
+	Vector2Int* tex = new Vector2Int(0, 0);
+	Vector2Int* size = new Vector2Int(30, 40);
+	objects.push_back(new SpaceShip(rend, &IM, &projectileTexCoor, &projectileSizeClamp));
 
 }
 
