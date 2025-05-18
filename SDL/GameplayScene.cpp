@@ -12,7 +12,7 @@ void GamePlayScene::Start(SDL_Renderer* rend) {
 	Scene::Start(rend);
 	Vector2Int* tex = new Vector2Int(0, 0);
 	Vector2Int* size = new Vector2Int(30, 40);
-	objects.push_back(new SpaceShip(rend, &IM, &projectileTexCoor, &projectileSizeClamp));
+	/*bjects.push_back(new SpaceShip(rend, &IM, &projectileTexCoor, &projectileSizeClamp));*/
 
 }
 

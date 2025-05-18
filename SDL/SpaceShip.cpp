@@ -88,7 +88,7 @@ void SpaceShip::Update(float dt) {
 
 	// EXTRA2. Actualiza cada proyectil
 	for (int i = 0; i < projectiles.size(); ) {
-		projectiles[i].update(dt);
+		/*projectiles[i].update(dt);*/
 
 		// Si sale de pantalla (ejemplo: pantalla 800x600), eliminarlo
 		if (projectiles[i].getPosition().x < 0 || projectiles[i].getPosition().x > 800 ||
@@ -107,23 +107,21 @@ void SpaceShip::Update(float dt) {
 	if (position.y > SCREEN_HEIGHT) position.y = -sizeToClamp.y;
 }
 
-void SpaceShip::render() {
-
-	for (auto& p : projectiles) {
-		p.Render();
-	}
-
-}
+//void SpaceShip::Render(SDL_Renderer* renderer) {
+//	for (auto& p : projectiles) {
+//		p.Render(renderer);
+//	}
+//}
 
 // Projectiles
-
-void SpaceShip::shoot() {
-	float projectileSpeed = 300.0f; // velocidad del disparo
-
-	// Crea el proyectil con todos los parámetros que espera el constructor
-	Projectile p(renderer, texCoor, sizeClamp, position, rotation, projectileSpeed);
-
-	// Añade el proyectil al vector de proyectiles
-	projectiles.push_back(p);
-}
-
+//
+//void SpaceShip::shoot() {
+//	float projectileSpeed = 300.0f; // velocidad del disparo
+//
+//	 Crea el proyectil con todos los parámetros que espera el constructor
+//	Projectile p(renderer, texCoor, sizeClamp, position, rotation, projectileSpeed);
+//
+//	 Añade el proyectil al vector de proyectiles
+//	projectiles.push_back(p);
+//}
+//

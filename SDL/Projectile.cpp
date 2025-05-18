@@ -17,12 +17,12 @@ void Projectile::Update(float dt) {
     position += velocity * dt;
 }
 
-void Projectile::Render() {
-    SDL_Rect dst;
-    dst.x = (int)position.x;
-    dst.y = (int)position.y;
-    dst.w = sizeToClamp.x;
-    dst.h = sizeToClamp.y;
-
-    SDL_RenderCopyEx(renderer, texture, nullptr, &dst, rotation, nullptr, SDL_FLIP_NONE);
-}
+//void Projectile::Render(SDL_Renderer* renderer) {
+//    SDL_Rect dst;
+//    dst.x = (int)position.x;
+//    dst.y = (int)position.y;
+//    dst.w = sizeToClamp.x;
+//    dst.h = sizeToClamp.y;
+//
+//    SDL_RenderCopyEx(renderer, texture, nullptr, &dst, rotation, nullptr, SDL_FLIP_NONE);
+//}
