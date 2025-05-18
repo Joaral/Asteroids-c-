@@ -9,8 +9,22 @@ public:
 	Vector2() { x = 0; y = 0; }
 	Vector2(float _x, float _y) { x = _x; y = _y; }
 
-	Vector2 operator +(Vector2& other) {
+	Vector2 operator +(const Vector2& other) const {
 		return Vector2(x + other.x, y + other.y);
+	}
+
+	Vector2 operator *(float other) const  {
+		return Vector2(x * other, y * other);
+	}
+	
+	Vector2 operator *(Vector2& other) const {
+		return Vector2(x * other.x, y * other.y);
+	}
+	
+	Vector2& operator +=(const Vector2& other) {
+		x += other.x;
+		y += other.y;
+		return *this;
 	}
 
 };
